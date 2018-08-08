@@ -1,0 +1,11 @@
+<div *ngIf="appStatus">
+  <h1>{{appTitle}} to Angular 2 Application </h1>
+  <div *ngFor = 'let lst of appList'>
+    <ul>
+      <li> {{lst.id}}</li>
+      <li> {{lst.name}}</li>
+      <img src={{lst.url}}>
+    </ul>
+  </div>
+</div>
+<!-- <test></test> -->
