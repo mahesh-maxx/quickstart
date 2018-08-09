@@ -1,11 +1,23 @@
-<div *ngIf="appStatus">
-  <h1>{{appTitle}} to Angular 2 Application </h1>
-  <div *ngFor = 'let lst of appList'>
+<div>
+  <h1>{{TutorialName}}</h1>
+  <div>
     <ul>
-      <li> {{lst.id}}</li>
-      <li> {{lst.name}}</li>
-      <img src={{lst.url}}>
+      <li>{{appList[0]  | lowercase}}</li>
+      <li>{{appList[1]  | uppercase}}</li>
+      <li>{{appList[2]  | lowercase}}</li>
     </ul>
+  </div>
+  <div>
+    <input (input) = "num = $event.target.value" placeholder="Enter number">
+    <input (input) = "mul = $event.target.value" placeholder="Enter multipler">
+  </div>
+  <div>
+    Status is {{status}}
+    <button (click) = "clicked()">Click Me!</button>
+    <div>
+    {{num}} * {{mul}} =
+    <p>Multiplier: {{num | Multiplier: mul}}</p>
+</div>
   </div>
 </div>
 <!-- <test></test> -->
